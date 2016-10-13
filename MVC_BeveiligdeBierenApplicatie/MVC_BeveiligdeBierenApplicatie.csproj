@@ -161,11 +161,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BierController.cs" />
+    <Compile Include="Controllers\BrouwerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SoortController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610130922310_InitialCreate.cs" />
+    <Compile Include="Migrations\201610130922310_InitialCreate.Designer.cs">
+      <DependentUpon>201610130922310_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Bier.cs">
       <DependentUpon>MVCBieren.tt</DependentUpon>
@@ -203,6 +211,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\biertempel.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\MVCBieren.edmx">
@@ -269,6 +278,21 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Bier\Create.cshtml" />
+    <Content Include="Views\Bier\Delete.cshtml" />
+    <Content Include="Views\Bier\Details.cshtml" />
+    <Content Include="Views\Bier\Edit.cshtml" />
+    <Content Include="Views\Bier\Index.cshtml" />
+    <Content Include="Views\Soort\Create.cshtml" />
+    <Content Include="Views\Soort\Delete.cshtml" />
+    <Content Include="Views\Soort\Details.cshtml" />
+    <Content Include="Views\Soort\Edit.cshtml" />
+    <Content Include="Views\Soort\Index.cshtml" />
+    <Content Include="Views\Brouwer\Create.cshtml" />
+    <Content Include="Views\Brouwer\Delete.cshtml" />
+    <Content Include="Views\Brouwer\Details.cshtml" />
+    <Content Include="Views\Brouwer\Edit.cshtml" />
+    <Content Include="Views\Brouwer\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -282,6 +306,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201610130922310_InitialCreate.resx">
+      <DependentUpon>201610130922310_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
